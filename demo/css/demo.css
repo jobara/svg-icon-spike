@@ -1,0 +1,22 @@
+.svg-icons {
+    color: #0022CC;
+}
+
+.svg-icons svg {
+    fill: currentColor;
+}
+
+svg.style,
+svg.style path,
+svg.style polygon,
+svg.style rect {
+    stroke: #0022CC;
+    fill: none;
+}
+
+.styleInline path,
+.styleInline polygon,
+.styleInline rect {
+    stroke: #000000;
+    fill: none;
+}
