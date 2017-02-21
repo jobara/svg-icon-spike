@@ -4,10 +4,35 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
         <title>SVG Icons and Images demo</title>
+
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            // ajax injection of SVG Sprite sheet from https://css-tricks.com/ajaxing-svg-sprite/
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", "../dist/icons.svg", true);
+            ajax.send();
+            ajax.onload = function(e) {
+            var div = document.createElement("div");
+                div.innerHTML = ajax.responseText;
+                document.body.insertBefore(div, document.body.childNodes[0]);
+            };
+
+            var ajax2 = new XMLHttpRequest();
+            ajax2.open("GET", "../dist/images.svg", true);
+            ajax2.send();
+            ajax2.onload = function(e) {
+            var div2 = document.createElement("div");
+                div2.innerHTML = ajax2.responseText;
+                document.body.insertBefore(div2, document.body.childNodes[0]);
+            };
+        </script>
     </head>
 
     <body>
+
         <h1>SVG Icons and Images demo</h1>
 
         <h2>SVG Icons</h2>
@@ -17,13 +42,25 @@
               <use xlink:href="../dist/icons.svg#fl-icon-section-icons-01" />
             </svg>
             <svg>
+              <use xlink:href="#fl-icon-section-icons-01" />
+            </svg>
+            <svg>
               <use xlink:href="../dist/icons.svg#fl-icon-section-icons-02" />
+            </svg>
+            <svg>
+              <use xlink:href="#fl-icon-section-icons-02" />
             </svg>
             <svg>
               <use xlink:href="../dist/icons.svg#fl-icon-section-icons-03" />
             </svg>
             <svg>
+              <use xlink:href="#fl-icon-section-icons-03" />
+            </svg>
+            <svg>
               <use xlink:href="../dist/icons.svg#fl-icon-section-icons-04" />
+            </svg>
+            <svg>
+              <use xlink:href="#fl-icon-section-icons-04" />
             </svg>
         </div>
 
@@ -34,8 +71,14 @@
         <svg>
           <use xlink:href="../dist/images.svg#fl-icon-section-paths-inlineStyle" />
         </svg>
+        <svg>
+          <use xlink:href="#fl-icon-section-paths-inlineStyle" />
+        </svg>
         <svg class="style">
           <use xlink:href="../dist/images.svg#fl-icon-section-paths-inlineStyle" />
+        </svg>
+        <svg class="style">
+          <use xlink:href="#fl-icon-section-paths-inlineStyle" />
         </svg>
 
         <h3>Internal CSS</h3>
@@ -43,8 +86,14 @@
         <svg>
           <use xlink:href="../dist/images.svg#fl-icon-section-paths-internalCSS" />
         </svg>
+        <svg>
+          <use xlink:href="#fl-icon-section-paths-internalCSS" />
+        </svg>
         <svg class="style">
           <use xlink:href="../dist/images.svg#fl-icon-section-paths-internalCSS" />
+        </svg>
+        <svg class="style">
+          <use xlink:href="#fl-icon-section-paths-internalCSS" />
         </svg>
 
         <h3>Presentation Attributes</h3>
@@ -52,8 +101,14 @@
         <svg>
           <use xlink:href="../dist/images.svg#fl-icon-section-paths-presentationAttributes" />
         </svg>
+        <svg>
+          <use xlink:href="#fl-icon-section-paths-presentationAttributes" />
+        </svg>
         <svg class="style">
           <use xlink:href="../dist/images.svg#fl-icon-section-paths-presentationAttributes" />
+        </svg>
+        <svg class="style">
+          <use xlink:href="#fl-icon-section-paths-presentationAttributes" />
         </svg>
 
         <h3>Inline SVG</h3>
