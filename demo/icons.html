@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />
+
+        <title>SVG Icons Test</title>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+        <!-- polyfill for making use of external svg icons in IE 11 and other old browsers-->
+        <script src="../node_modules/svg4everybody/dist/svg4everybody.min.js"></script>
+        <script>svg4everybody(); // run it now or whenever you are ready</script>
+    </head>
+
+    <body>
+
+        <h1>SVG Icons Test</h1>
+
+        <h2>Default</h2>
+
+        <svg>
+            <use xlink:href="../dist/icons.svg#fl-icon-captions" />
+        </svg>
+        <svg class="accented">
+            <use xlink:href="../dist/icons.svg#fl-icon-captions-accent" />
+        </svg>
+
+
+        <h2>Contrast</h2>
+
+        <div class="wb">
+
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-captions" />
+            </svg>
+            <svg class="accented">
+                <use xlink:href="../dist/icons.svg#fl-icon-captions-accent" />
+            </svg>
+
+        </div>
+    </body>
+</html>

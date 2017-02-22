@@ -15,7 +15,8 @@
             ajax.open("GET", "../dist/icons.svg", true);
             ajax.send();
             ajax.onload = function(e) {
-            var div = document.createElement("div");
+                var div = document.createElement("div");
+                div.className += " hideSprite";
                 div.innerHTML = ajax.responseText;
                 document.body.insertBefore(div, document.body.childNodes[0]);
             };
@@ -24,7 +25,8 @@
             ajax2.open("GET", "../dist/images.svg", true);
             ajax2.send();
             ajax2.onload = function(e) {
-            var div2 = document.createElement("div");
+                var div2 = document.createElement("div");
+                div.className += " hideSprite";
                 div2.innerHTML = ajax2.responseText;
                 document.body.insertBefore(div2, document.body.childNodes[0]);
             };
@@ -38,29 +40,254 @@
         <h2>SVG Icons</h2>
 
         <div class="svg-icons">
+            <h3>External Reference</h3>
             <svg>
-              <use xlink:href="../dist/icons.svg#fl-icon-section-icons-01" />
+                <use xlink:href="../dist/icons.svg#fl-icon-backward" />
             </svg>
             <svg>
-              <use xlink:href="#fl-icon-section-icons-01" />
+                <use xlink:href="../dist/icons.svg#fl-icon-big a" />
             </svg>
             <svg>
-              <use xlink:href="../dist/icons.svg#fl-icon-section-icons-02" />
+                <use xlink:href="../dist/icons.svg#fl-icon-captions size large" />
             </svg>
             <svg>
-              <use xlink:href="#fl-icon-section-icons-02" />
+                <use xlink:href="../dist/icons.svg#fl-icon-captions size small" />
             </svg>
             <svg>
-              <use xlink:href="../dist/icons.svg#fl-icon-section-icons-03" />
+                <use xlink:href="../dist/icons.svg#fl-icon-captions" />
             </svg>
             <svg>
-              <use xlink:href="#fl-icon-section-icons-03" />
+                <use xlink:href="../dist/icons.svg#fl-icon-contrast" />
             </svg>
             <svg>
-              <use xlink:href="../dist/icons.svg#fl-icon-section-icons-04" />
+                <use xlink:href="../dist/icons.svg#fl-icon-crossout diag dotted line for contrast default" />
             </svg>
             <svg>
-              <use xlink:href="#fl-icon-section-icons-04" />
+                <use xlink:href="../dist/icons.svg#fl-icon-font style" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-forward" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-indicator arrow for contrast" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-keyboard shortcuts" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-line space condensed" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-line space expanded" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-line space" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-lines on slider handle" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-links" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-page width less" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-page width more" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-prefrences" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-reset undo arrow" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-section-icons-01" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-section-icons-02" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-section-icons-03" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-section-icons-04" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-show more" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-side of page" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-simplify" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-size" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-small a" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-star" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-table of contents" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-text to speech no article" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-text to speech read" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-text to speech reading speed fast" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-text to speech reading speed slow" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-text to speech reading" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-text to speech" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-top of page" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-triangle" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-word space close" />
+            </svg>
+            <svg>
+                <use xlink:href="../dist/icons.svg#fl-icon-word space far" />
+            </svg>
+
+            <h3>Injected Reference</h3>
+            <svg>
+                <use xlink:href="#fl-icon-backward" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-big a" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-captions size large" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-captions size small" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-captions" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-contrast" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-crossout diag dotted line for contrast default" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-font style" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-forward" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-indicator arrow for contrast" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-keyboard shortcuts" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-line space condensed" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-line space expanded" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-line space" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-lines on slider handle" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-links" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-page width less" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-page width more" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-prefrences" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-reset undo arrow" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-section-icons-01" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-section-icons-02" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-section-icons-03" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-section-icons-04" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-show more" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-side of page" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-simplify" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-size" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-small a" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-star" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-table of contents" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-text to speech no article" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-text to speech read" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-text to speech reading speed fast" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-text to speech reading speed slow" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-text to speech reading" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-text to speech" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-top of page" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-triangle" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-word space close" />
+            </svg>
+            <svg>
+                <use xlink:href="#fl-icon-word space far" />
             </svg>
         </div>
 

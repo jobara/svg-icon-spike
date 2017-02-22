@@ -1,0 +1,22 @@
+body {
+    color: #000000;
+}
+
+svg {
+    fill: currentColor
+}
+
+svg.accented{
+    color: #0022CC;
+    fill: #565656;
+}
+
+.wb {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.wb svg {
+    fill: currentColor;
+    color: currentColor;
+}

@@ -22,6 +22,7 @@ module.exports = function (grunt) {
                     end_with_newline: true,
                     extra_liners: ["symbol"]
                 },
+                cleanup: ["stlye", "fill", "stroke"],
                 includedemo: true
             },
             svgs: {
