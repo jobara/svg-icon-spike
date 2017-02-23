@@ -20,3 +20,8 @@ svg.accented{
     fill: currentColor;
     color: currentColor;
 }
+
+.elements svg {
+  height: 2rem;
+  width: 2rem;
+}
